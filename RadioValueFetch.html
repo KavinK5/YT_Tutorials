@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <form>
+      <input type='radio' name='games' id="Chess" value='Chess'>
+      <label for='Chess'>Chess</label>
+      
+      <input type='radio' name='games' id="Sudoku" value='Sudoku'>
+      <label for='Sudoku'>Sudoku</label>
+      
+      <input type='radio' name='games' id="Cricket" value='Cricket'>
+      <label for='Cricket'>Cricket</label>
+      <br><br>
+      
+      <input type="text" id='radioValue'  placeholder="letsFetch">
+    </form>
+    
+    <script>
+      document.getElementsByName('games').forEach(itr1 =>
+          itr1.addEventListener('click',func2)
+      )
+      
+      function func2(){
+        document.getElementsByName('games').forEach(itr5 => {
+          if(itr5.checked){
+               document.getElementById('radioValue').value = itr5.value;
+          }
+        })
+      }
+        
+    </script>
+  </body>
+</html>
