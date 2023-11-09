@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <form>
+      <select id='selectID'>
+        <option></option>
+        <option>C</option>
+        <option>C++</option>
+        <option>Csharp</option>
+        <option>Python</option>
+      </select>
+      <input type='text' id='fetchSelect'>
+    </form>
+    
+    <script>
+      var slct = document.getElementById('selectID');
+      
+      slct.addEventListener('change',function(){
+            let txt = document.getElementById('fetchSelect');
+            txt.value = this.value;
+      });
+    </script>
+  </body>
+</html>
